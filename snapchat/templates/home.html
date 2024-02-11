@@ -1,0 +1,47 @@
+{% block content %}
+<style>
+    body{
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    input{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid black;
+        font-size: 15px;
+        padding: 5px;
+        margin: 20px;
+    }
+    
+    button{
+        height: fit-content;
+        width: 140px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 20px;
+
+    }
+</style>
+<center>
+    <h1>Welcome to the SnapChat</h1>
+</center>
+<form action="homeredirect" method="POST">
+    {%csrf_token%}    
+    <center>
+        <button type="submit" name="signIn">Sign In</button>
+        <button type="submit" name="signUp">Sign Up</button>   
+    </center>
+    
+   
+</form>
+{% endblock %}

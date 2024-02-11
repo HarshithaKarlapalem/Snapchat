@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body{
+        background-color: rgb(36, 34, 34);
+        color: white;
+    }
+    button{
+        height: fit-content;
+        width: 180px;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 10px;
+        font-size: 15px;
+        color: white;
+        background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<center>
+    <h1>Welcome to SnapChart</h1>
+</center>
+<form action="User" method="POST">
+    {%csrf_token%}
+    
+    <center>        
+        <button type="submit" name="takeIMG">Take a Picture</button>
+    </center>
+    <center>        
+        <button type="submit" name="viewIMG">View Image</button>
+    </center>
+    <center>        
+        <button type="submit" name="Send">Send To</button>
+    </center>    
+    <center>        
+        <button type="submit" name="quit">Quit</button>
+    </center>
+</form>
+    {% endblock %}

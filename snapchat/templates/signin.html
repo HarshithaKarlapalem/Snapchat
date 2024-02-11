@@ -1,0 +1,56 @@
+{% block content %}
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    input{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid black;
+        font-size: 15px;
+        padding: 5px;
+        margin: 20px;
+    }
+    form{
+        margin: 20px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    button{
+        height: fit-content;
+        width: 140px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+
+    }
+</style>
+<center>
+    <h1>Welcome to SnapChart</h1>
+</center>
+<form action="LoginIn" method="POST">
+    {%csrf_token%}
+    
+    <center>
+        <label for="name">UserName:</label>
+        <input type="text" name="name">
+    </center>
+    <center>
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+    </center>
+    
+    <br><br>
+    <center>        
+        <button type="submit" name="logIn">Log In</button>
+    </center>
+    
+</form>
+    {% endblock %}
